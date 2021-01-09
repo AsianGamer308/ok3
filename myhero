@@ -47,11 +47,16 @@ game:GetService("ReplicatedStorage").Package.Events.Combat:FireServer(unpack(arg
 wait()
 end
 end)
-
+Home:addToggle("Noclip",function(value)
+    _G.Noclip = value
+ while _G.Noclip do
+    game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+    wait()
+ end
+end)
 Home:addToggle("Thug",function(value)
 _G.Thug = value
  while _G.Thug do 
-     game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Living.Thug.HumanoidRootPart.CFrame*CFrame.new(0,-7,0) * CFrame.Angles(-80,0,0)
    wait()
  end
@@ -65,5 +70,4 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Package.Events.GetQuest:InvokeServer(unpack(args))
-
 end)
