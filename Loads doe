@@ -1,0 +1,3 @@
+if game.GameId == 212154879 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AsianGamer308/ok3/main/sb2"))()
+end
