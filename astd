@@ -1,2 +1,2 @@
 
-game:GetService('TeleportService'):Teleport(lol)
+lol
