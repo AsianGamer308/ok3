@@ -1,3 +1,0 @@
-_G.funniest = true
-game:GetService('TeleportService'):Teleport(4996049426)
---dies
