@@ -138,6 +138,10 @@ TP:addButton("Usoapp",function(value)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(4734.00635, 7.96545315, 2912.58911))
 end)
 
+TP:addButton("Trevor",function(value)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-337.128174, 331.886475, 657.432495))
+end)
+
 TP:addButton("Graveyard Island",function(value)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-5426.90332, 48.5059471, -688.567383))
 end)
