@@ -71,6 +71,19 @@ Main:addToggle("Auto Snow",function(value)
 
 local Quest = UI:addPage("Quests")
 
+Quest:addButton("Buy Fruit",function(value)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-456.966339, 73.0458984, 343.314362))
+    wait(.1)
+    local args = {
+        [1] = "Candies",
+        [2] = "Buy",
+        [3] = 4,
+        [4] = 1
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
 Quest:addButton("Get Raider",function(value)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-427.442719, 72.9963455, 1839.95032))
     wait(.1)
