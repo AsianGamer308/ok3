@@ -1,7 +1,7 @@
 
 local GUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/derekcool38/cats/main/UI-Librarys/ModernUI/SourceV2.lua"))()
 
-local UI = GUI:CreateWindow("Yuriware | STK",{
+local UI = GUI:CreateWindow("Blox Fruit Asian",{
     CornerRadius = 8; -- How Cornerius the ui is
     TitleSize = 14; -- The Size of the Title
     CustomFont = Enum.Font.Gotham; -- Custom Font for only the Title,The Discord Thing and the timer
@@ -29,37 +29,26 @@ Main:addDropdown("TP To Player",PlayerTable,function(value)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[value].Character.HumanoidRootPart.CFrame
 end)
 
-
-PS.PlayerAdded:Connect(function(plr)
-    table.insert(PlayerTable,plr.Name)
-    table.sort(PlayerTable)
-    Tele:UpdateDropdown("TP To Player","TP To Player",PlayerTable,function(value)
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[value].Character.HumanoidRootPart.CFrame
-    end)
+Main:addButton(" Noclip",function(value)
+    game:GetService("RunService").Stepped:Connect(function()
+    game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end)
 end)
 
-PS.PlayerRemoving:Connect(function(plr)
-    table.remove(PlayerTable,plr.Name)
-    table.sort(PlayerTable)
-    Tele:UpdateDropdown("TP To Player","TP To Player",PlayerTable,function(value)
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[value].Character.HumanoidRootPart.CFrame
-    end)
-end)
 Main:addToggle("Auto Click",function(value)
     getgenv().click = value
     while getgenv().click do
         game:GetService("VirtualUser"):ClickButton1(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-        wait(.5)
+        wait(.2)
     end
 end)
-
-Main:addToggle("Auto Snow",function(value)
-    getgenv().snow = value
-    while getgenv().snow do
+Main:addToggle("Auto Raider",function(value)
+    getgenv().AutoFarm = value
+    while getgenv().AutoFarm do
      game:GetService("VirtualUser"):ClickButton1(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["Snow Bandit [Lv. 90]"].HumanoidRootPart.CFrame*CFrame.new(0,15,0) * CFrame.Angles(80,0,0)
- game:GetService("Workspace").Enemies["Snow Bandit [Lv. 90]"].HumanoidRootPart.Size = Vector3.new(30,30,30)
- game:GetService("Workspace").Enemies["Snow Bandit [Lv. 90]"].HumanoidRootPart.Transparency = .2
+     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["Raider [Lv. 700]"].HumanoidRootPart.CFrame*CFrame.new(0,13,0) * CFrame.Angles(80,0,0)
+     game:GetService("Workspace").Enemies["Raider [Lv. 700]"].HumanoidRootPart.Size = Vector3.new(30,30,30)
+     game:GetService("Workspace").Enemies["Raider [Lv. 700]"].HumanoidRootPart.Transparency = .2
  wait()
  end
  end)
@@ -75,18 +64,32 @@ wait()
 end
 end)
 
-Main:addButton("Get Snow",function(value)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(1389.40222, 87.2985916, -1302.23254))
-    wait(.2)
-local args = {
-    [1] = "StartQuest",
-    [2] = "SnowQuest",
-    [3] = 1
-}
+Main:addToggle("Auto Snow",function(value)
+    getgenv().AutoFarm = value
+    while getgenv().AutoFarm do
+     game:GetService("VirtualUser"):ClickButton1(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["Snow Lurker [Lv. 1375]"].HumanoidRootPart.CFrame*CFrame.new(0,13,0) * CFrame.Angles(80,0,0)
+     game:GetService("Workspace").Enemies["Snow Lurker [Lv. 1375]"].HumanoidRootPart.Size = Vector3.new(30,30,30)
+     game:GetService("Workspace").Enemies["Snow Lurker [Lv. 1375]"].HumanoidRootPart.Transparency = .2
+ wait()
+ end
+ end)
 
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))end)
+local Quest = UI:addPage("Quests")
 
-Main:addButton("Get Deck",function(value)
+Quest:addButton("Get Raider",function(value)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-427.442719, 72.9963455, 1839.95032))
+    wait(.1)
+    local args = {
+        [1] = "StartQuest",
+        [2] = "Area1Quest",
+        [3] = 1
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+Quest:addButton("Get Deck",function(value)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(1031.20056, 125.082932, 32910.0273))
 wait(.1)
 local args = {
@@ -98,25 +101,16 @@ local args = {
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
 end)
 
-Main:addBlankLabel("N For Noclip",{
-    CustomFont = Enum.Font.GothamSemibold;
-    TextSize = 13;
-})
+Quest:addButton("Get Snow",function(value)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(5667.56104, 31.5269318, -6482.71045))
+wait(.1)
+local args = {
+    [1] = "StartQuest",
+    [2] = "FrostQuest",
+    [3] = 2
+}
 
-noclip = false
-game:GetService('RunService').Stepped:connect(function()
-if noclip then
-game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
-end
-end)
-plr = game.Players.LocalPlayer
-mouse = plr:GetMouse()
-mouse.KeyDown:connect(function(key)
-
-if key == "n" then
-noclip = not noclip
-game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
-end
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
 end)
 
 local LP = UI:addPage("Local")
@@ -148,8 +142,6 @@ end,{
 LP:addButton("Click To Rejoin",function(value)
     game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
     end)
-
-UI:Toggle() -- To Toggle The UI | To make it functional put in a UserInputService function shown below 
 
 game:GetService("UserInputService").InputBegan:Connect(function(input)
         if input.KeyCode == Enum.KeyCode.RightShift then -- Change RightShift to whatever key you want it to be
