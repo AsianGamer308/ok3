@@ -120,6 +120,44 @@ local args = {
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
 end)
 
+local TP = UI:addPage("Teleports")
+
+TP:addButton("Green Zone",function(value)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-2444.59424, 73.1913528, -3231.59961))
+end)
+
+TP:addButton("Cafe",function(value)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-383.176208, 73.0458984, 290.855591))
+end)
+
+TP:addButton("Dark Arena",function(value)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(3414.55029, 13.3751526, -3315.84399))
+end)
+
+TP:addButton("Usoapp",function(value)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(4734.00635, 7.96545315, 2912.58911))
+end)
+
+TP:addButton("Graveyard Island",function(value)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-5426.90332, 48.5059471, -688.567383))
+end)
+
+TP:addButton("Snow Mountain",function(value)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(586.443237, 401.447845, -5387.1416))
+end)
+
+TP:addButton("Hot and Cold",function(value)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-5551.77734, 81.9775543, -5301.75))
+end)
+
+TP:addButton("Cursed Ship",function(value)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(962.655823, 125.082932, 32949.4844))
+end)
+
+TP:addButton("Ice Castle",function(value)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(6075.33594, 294.412598, -6677.92822))
+end)
+
 local LP = UI:addPage("Local")
 
 LP:addBlankLabel("Player Modifications",{
