@@ -39,45 +39,65 @@ end)
 Main:addToggle("Auto Raider",function(value)
     getgenv().AutoFarm = value
     while getgenv().AutoFarm do
-     game:GetService("VirtualUser"):ClickButton1(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["Raider [Lv. 700]"].HumanoidRootPart.CFrame*CFrame.new(0,0,15) * CFrame.Angles(80,0,0)
-     game:GetService("Workspace").Enemies["Raider [Lv. 700]"].HumanoidRootPart.Size = Vector3.new(30,30,30)
-     game:GetService("Workspace").Enemies["Raider [Lv. 700]"].HumanoidRootPart.Transparency = .2
- wait()
- end
- end)
+    game:GetService("VirtualUser"):ClickButton1(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+    for _,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+    
+    if string.find(v.Name, "Raid") and v:FindFirstChild("HumanoidRootPart") then
+    
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v:FindFirstChild("HumanoidRootPart").CFrame*CFrame.new(0,0,15)
+    v:FindFirstChild("HumanoidRootPart").Size = Vector3.new(30,30,30)
+    v:FindFirstChild("HumanoidRootPart").Transparency = .2
+    end
+    end
+    wait()
+    end
+end)
 
 Main:addToggle("Auto DeckHand",function(value)
-   getgenv().AutoFarm = value
-   while getgenv().AutoFarm do
+    getgenv().AutoFarm = value
+    while getgenv().AutoFarm do
     game:GetService("VirtualUser"):ClickButton1(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["Ship Deckhand [Lv. 1250]"].HumanoidRootPart.CFrame*CFrame.new(0,0,15) * CFrame.Angles(80,0,0)
-game:GetService("Workspace").Enemies["Ship Deckhand [Lv. 1250]"].HumanoidRootPart.Size = Vector3.new(30,30,30)
-game:GetService("Workspace").Enemies["Ship Deckhand [Lv. 1250]"].HumanoidRootPart.Transparency = .2
-wait()
-end
+    for _,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+    
+    if string.find(v.Name, "Ship Deck") and v:FindFirstChild("HumanoidRootPart") then
+    
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v:FindFirstChild("HumanoidRootPart").CFrame*CFrame.new(0,0,15)
+    v:FindFirstChild("HumanoidRootPart").Size = Vector3.new(30,30,30)
+    v:FindFirstChild("HumanoidRootPart").Transparency = .2
+    end
+    end
+    wait()
+    end
 end)
 
 Main:addToggle("Auto Artic",function(value)
     getgenv().AutoFarm = value
     while getgenv().AutoFarm do
-     game:GetService("VirtualUser"):ClickButton1(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["Arctic Warrior [Lv. 1350]"].HumanoidRootPart.CFrame*CFrame.new(0,0,15) * CFrame.Angles(80,0,0)
-     game:GetService("Workspace").Enemies["Arctic Warrior [Lv. 1350]"].HumanoidRootPart.Size = Vector3.new(30,30,30)
-     game:GetService("Workspace").Enemies["Arctic Warrior [Lv. 1350]"].HumanoidRootPart.Transparency = .2
- wait()
- end
+    game:GetService("VirtualUser"):ClickButton1(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+    for _,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+    if string.find(v.Name, "Arctic") and v:FindFirstChild("HumanoidRootPart") then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v:FindFirstChild("HumanoidRootPart").CFrame*CFrame.new(0,0,15)
+    v:FindFirstChild("HumanoidRootPart").Size = Vector3.new(30,30,30)
+    v:FindFirstChild("HumanoidRootPart").Transparency = .2
+    end
+    end
+    wait()
+    end
  end)
 
 Main:addToggle("Auto Snow",function(value)
     getgenv().AutoFarm = value
     while getgenv().AutoFarm do
-     game:GetService("VirtualUser"):ClickButton1(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["Snow Lurker [Lv. 1375]"].HumanoidRootPart.CFrame*CFrame.new(0,0,15) * CFrame.Angles(80,0,0)
-     game:GetService("Workspace").Enemies["Snow Lurker [Lv. 1375]"].HumanoidRootPart.Size = Vector3.new(30,30,30)
-     game:GetService("Workspace").Enemies["Snow Lurker [Lv. 1375]"].HumanoidRootPart.Transparency = .2
- wait()
- end
+    game:GetService("VirtualUser"):ClickButton1(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+    for _,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+    if string.find(v.Name, "Snow") and v:FindFirstChild("HumanoidRootPart") then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v:FindFirstChild("HumanoidRootPart").CFrame*CFrame.new(0,0,15)
+    v:FindFirstChild("HumanoidRootPart").Size = Vector3.new(30,30,30)
+    v:FindFirstChild("HumanoidRootPart").Transparency = .2
+    end
+    end
+    wait()
+    end
  end)
 
 local Quest = UI:addPage("Quests")
