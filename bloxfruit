@@ -68,7 +68,7 @@ Main:addToggle("Auto Snow",function(value)
     getgenv().AutoFarm = value
     while getgenv().AutoFarm do
      game:GetService("VirtualUser"):ClickButton1(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["Snow Lurker [Lv. 1375]"].HumanoidRootPart.CFrame*CFrame.new(0,13,0) * CFrame.Angles(80,0,0)
+     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["Snow Lurker [Lv. 1375]"].HumanoidRootPart.CFrame*CFrame.new(0,15,0) * CFrame.Angles(80,0,0)
      game:GetService("Workspace").Enemies["Snow Lurker [Lv. 1375]"].HumanoidRootPart.Size = Vector3.new(30,30,30)
      game:GetService("Workspace").Enemies["Snow Lurker [Lv. 1375]"].HumanoidRootPart.Transparency = .2
  wait()
