@@ -58,6 +58,17 @@ wait()
 end
 end)
 
+Main:addToggle("Auto Artic",function(value)
+    getgenv().AutoFarm = value
+    while getgenv().AutoFarm do
+     game:GetService("VirtualUser"):ClickButton1(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Enemies["Arctic Warrior [Lv. 1350]"].HumanoidRootPart.CFrame*CFrame.new(0,0,15) * CFrame.Angles(80,0,0)
+     game:GetService("Workspace").Enemies["Arctic Warrior [Lv. 1350]"].HumanoidRootPart.Size = Vector3.new(30,30,30)
+     game:GetService("Workspace").Enemies["Arctic Warrior [Lv. 1350]"].HumanoidRootPart.Transparency = .2
+ wait()
+ end
+ end)
+
 Main:addToggle("Auto Snow",function(value)
     getgenv().AutoFarm = value
     while getgenv().AutoFarm do
@@ -108,6 +119,18 @@ local args = {
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
 end)
 
+Quest:addButton("Get Artic",function(value)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(5667.56104, 31.5269318, -6482.71045))
+    wait(.1)
+    local args = {
+        [1] = "StartQuest",
+        [2] = "FrostQuest",
+        [3] = 1
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
 Quest:addButton("Get Snow",function(value)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(5667.56104, 31.5269318, -6482.71045))
 wait(.1)
@@ -128,6 +151,10 @@ end)
 
 TP:addButton("Cafe",function(value)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-383.176208, 73.0458984, 290.855591))
+end)
+
+TP:addButton("Factory",function(value)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(422.001221, 210.087372, -422.585205))
 end)
 
 TP:addButton("Dark Arena",function(value)
