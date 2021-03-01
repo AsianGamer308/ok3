@@ -115,6 +115,18 @@ end)
 
 local Chest = UI:addPage("Chest Farm")
 
+Chest:addToggle("Chest",function(value)
+    getgenv().chest = value
+    while getgenv().chest do
+        for i,v in pairs(game.Workspace.Map.GhostShipInterior.Chests:GetChildren()) do
+            if v ~= nil then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+            end
+        end
+        wait(1)
+    end
+end)
+
 Chest:addToggle("Auto Chest1",function(value)
     getgenv().chest = value
     while getgenv().chest do
