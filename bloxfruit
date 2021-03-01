@@ -36,6 +36,43 @@ Main:addToggle("Auto Click",function(value)
         wait(.2)
     end
 end)
+
+Main:addToggle("Auto Chest1",function(value)
+    getgenv().die = value
+    while getgenv().die do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Chest1.CFrame
+        wait(1)
+    end
+end)
+
+Main:addToggle("Auto Chest2",function(value)
+    getgenv().die = value
+    while getgenv().die do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Chest2.CFrame
+        wait(1)
+    end
+end)
+
+Main:addToggle("Auto Chest3",function(value)
+    getgenv().die = value
+    while getgenv().die do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Chest3.CFrame
+        wait(1)
+    end
+end)
+
+Main:addToggle("Auto Die Raid Map",function(value)
+    getgenv().die = value
+    while getgenv().die do
+        for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+            if v ~= nil then
+    v.Humanoid.Health = 0
+            end
+        end
+        wait(0)
+    end
+end)
+
 Main:addToggle("Auto Raider",function(value)
     getgenv().AutoFarm = value
     while getgenv().AutoFarm do
