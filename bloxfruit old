@@ -37,30 +37,6 @@ Main:addToggle("Auto Click",function(value)
     end
 end)
 
-Main:addToggle("Auto Chest1",function(value)
-    getgenv().die = value
-    while getgenv().die do
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Chest1.CFrame
-        wait(1)
-    end
-end)
-
-Main:addToggle("Auto Chest2",function(value)
-    getgenv().die = value
-    while getgenv().die do
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Chest2.CFrame
-        wait(1)
-    end
-end)
-
-Main:addToggle("Auto Chest3",function(value)
-    getgenv().die = value
-    while getgenv().die do
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Chest3.CFrame
-        wait(1)
-    end
-end)
-
 Main:addToggle("Auto Kill Near Mobs",function(value)
     getgenv().die = value
     while getgenv().die do
