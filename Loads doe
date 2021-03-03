@@ -1,11 +1,1 @@
-if game.GameId == 212154879 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/AsianGamer308/ok3/main/sb2"))()
-elseif game.GameId == 1489026993 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/AsianGamer308/ok3/main/survive%20the%20killer"))()
-elseif game.GameId == 1946019424 then
-	    loadstring(game:HttpGet("https://raw.githubusercontent.com/AsianGamer308/ok3/main/world"))()
-elseif game.PlaceId == 4442272183 then
-	    loadstring(game:HttpGet("https://raw.githubusercontent.com/AsianGamer308/ok3/main/bloxfruit"))()
-elseif game.PlaceId == 2753915549 then
-	    loadstring(game:HttpGet("https://raw.githubusercontent.com/AsianGamer308/ok3/main/bloxfruit%20old"))()
-end
+game.Players.LocalPlayer:Kick(“um ok”)
