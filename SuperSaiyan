@@ -1,0 +1,115 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/lime"))()
+
+local w = Library:Window("Main")
+
+w:Toggle("Auto Attack", function(value)
+    getgenv().lol = value
+    while getgenv().lol do
+    local args = {
+                [1] = 6
+                    }
+        game:GetService("ReplicatedStorage").Remotes.Combat:FireServer(unpack(args))
+    wait()
+end
+end)
+
+w:Toggle("AutoThug", function(value)
+    getgenv().ok = value
+    while getgenv().ok do
+    for _,v in pairs(game:GetService("Workspace").Dummies:GetDescendants()) do
+    if string.find(v.Name, "Thug") and v:FindFirstChild("HumanoidRootPart") then
+        repeat
+            wait()
+            local args = {
+                [1] = 6
+                    }
+        game:GetService("ReplicatedStorage").Remotes.Combat:FireServer(unpack(args))
+            v:FindFirstChild("HumanoidRootPart").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,5,-10)
+            v:FindFirstChild("HumanoidRootPart").Size = Vector3.new(30,30,30)
+            v:FindFirstChild("HumanoidRootPart").Transparency = .2
+            v:FindFirstChild("HumanoidRootPart").CanCollide = false
+        until v.Humanoid.Health == 0
+end
+end
+wait()
+end
+end)
+
+w:Toggle("AutoTien", function(value)
+    getgenv().tie = value
+    while getgenv().tie do
+    for _,v in pairs(game:GetService("Workspace").Dummies:GetDescendants()) do
+    if string.find(v.Name, "Tie") and v:FindFirstChild("HumanoidRootPart") then
+        repeat
+            wait()
+            local args = {
+                [1] = 6
+                    }
+        game:GetService("ReplicatedStorage").Remotes.Combat:FireServer(unpack(args))
+            v:FindFirstChild("HumanoidRootPart").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,5,-10)
+            v:FindFirstChild("HumanoidRootPart").Size = Vector3.new(30,30,30)
+            v:FindFirstChild("HumanoidRootPart").Transparency = .2
+            v:FindFirstChild("HumanoidRootPart").CanCollide = false
+        until v.Humanoid.Health == 0
+end
+end
+wait()
+end
+end)
+
+w:Toggle("AutoAndroid", function(value)
+    getgenv().andr = value
+    while getgenv().andr do
+    for _,v in pairs(game:GetService("Workspace").Dummies:GetDescendants()) do
+    if string.find(v.Name, "And") and v:FindFirstChild("HumanoidRootPart") then
+        repeat
+            wait()
+            local args = {
+                [1] = 6
+                    }
+        game:GetService("ReplicatedStorage").Remotes.Combat:FireServer(unpack(args))
+            v:FindFirstChild("HumanoidRootPart").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,5,-10)
+            v:FindFirstChild("HumanoidRootPart").Size = Vector3.new(30,30,30)
+            v:FindFirstChild("HumanoidRootPart").Transparency = .2
+            v:FindFirstChild("HumanoidRootPart").CanCollide = false
+        until v.Humanoid.Health == 0
+end
+end
+wait()
+end
+end)
+
+w:Toggle("AutoBroly", function(value)
+    getgenv().brow = value
+    while getgenv().brow do
+    for _,v in pairs(game:GetService("Workspace").Dummies:GetDescendants()) do
+    if string.find(v.Name, "Bro") and v:FindFirstChild("HumanoidRootPart") then
+        repeat
+            wait()
+            local args = {
+                [1] = 6
+                    }
+        game:GetService("ReplicatedStorage").Remotes.Combat:FireServer(unpack(args))
+            v:FindFirstChild("HumanoidRootPart").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,5,-10)
+            v:FindFirstChild("HumanoidRootPart").Size = Vector3.new(30,30,30)
+            v:FindFirstChild("HumanoidRootPart").Transparency = .2
+            v:FindFirstChild("HumanoidRootPart").CanCollide = false
+        until v.Humanoid.Health == 0
+end
+end
+wait()
+end
+end)
+
+local re = Library:Window("Rebirth")
+
+re:Toggle("AutoRebirth", function(value)
+    getgenv().rebirth = value
+    while getgenv().rebirth do
+    local args = {
+    [1] = game:GetService("Players").LocalPlayer.leaderstats["\240\159\140\128Rebirth"]
+        }
+        game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+    wait(.3)
+end
+end)
