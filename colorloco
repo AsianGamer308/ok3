@@ -157,6 +157,9 @@ local args = {
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
 end)
 
-tp:Button("Infinite Ken Range", function()
+tp:Toggle("Toggle", function(value)
+getgenv().ok = value
+while getgenv().ok do
 game:GetService("Players").LocalPlayer.VisionRadius.Value = "5000000000"
+wait()
 end)
