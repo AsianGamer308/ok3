@@ -34,10 +34,6 @@ w:Button("GreenBit Dock", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-1960.91895, 17.4670563, -2654.06445))
 end)
 
-w:Button("GreenBit Dock", function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-1960.91895, 17.4670563, -2654.06445))
-end)
-
 local change = Library:Window("Color Changer")
 
 change:Button("Orange Soda", function()
