@@ -162,4 +162,5 @@ getgenv().ok = value
 while getgenv().ok do
 game:GetService("Players").LocalPlayer.VisionRadius.Value = "5000000000"
 wait()
+end
 end)
