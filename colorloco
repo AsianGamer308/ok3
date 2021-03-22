@@ -1,0 +1,52 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/lime"))()
+
+local w = Library:Window("Color Locations")
+
+w:Button("Buy Color", function()
+local args = {
+    [1] = "ColorsDealer",
+    [2] = "2"
+}
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+w:Button("Snow Mountain", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-143.375717, 8.81899071, -5136.29639))
+end)
+
+w:Button("Ice Castle", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(6080.60254, 423.629547, -6826.41553))
+end)
+
+w:Button("Forgetten Island", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-3552.52905, 219.190765, -10064.0664))
+end)
+
+w:Button("Half Hot", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-5132.54834, 146.076935, -5401.73633))
+end)
+
+w:Button("Cursed Ship", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(795.973633, 125.400391, 33141.3672))
+end)
+
+w:Button("GreenBit Dock", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-1960.91895, 17.4670563, -2654.06445))
+end)
+
+w:Button("GreenBit Dock", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-1960.91895, 17.4670563, -2654.06445))
+end)
+
+local tp = Library:Window("World TP")
+
+tp:Button("Old World", function()
+game:GetService('TeleportService'):Teleport(2753915549)
+end)
+
+tp:Button("New World", function()
+local args = {
+    [1] = "TravelDressrosa"
+}
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
