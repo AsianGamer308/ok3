@@ -38,6 +38,112 @@ w:Button("GreenBit Dock", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-1960.91895, 17.4670563, -2654.06445))
 end)
 
+local change = Library:Window("Color Changer")
+
+change:Button("Orange Soda", function()
+local args = {
+    [1] = "activateColor",
+    [2] = "Orange Soda"
+}
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+change:Button("Bright Yellow", function()
+local args = {
+    [1] = "activateColor",
+    [2] = "Bright Yellow"
+}
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+change:Button("Yellow Sunshine", function()
+local args = {
+    [1] = "activateColor",
+    [2] = "Yellow Sunshine"
+}
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+change:Button("Slimy Green", function()
+  local args = {
+    [1] = "activateColor",
+    [2] = "Slimy Green"
+}
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args)) 
+end)
+
+change:Button("Green Lizard", function()
+  local args = {
+    [1] = "activateColor",
+    [2] = "Green Lizard"
+}
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))     
+end)
+
+change:Button("Blue Jeans", function()
+  local args = {
+    [1] = "activateColor",
+    [2] = "Blue Jeans"
+}
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))     
+end)
+
+change:Button("Plump Purple", function()
+  local args = {
+    [1] = "activateColor",
+    [2] = "Plump Purple"
+}
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))     
+end)
+
+change:Button("Fiery Rose", function()
+  local args = {
+    [1] = "activateColor",
+    [2] = "Fiery Rose"
+}
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))     
+end)
+
+change:Button("Heat Wave", function()
+  local args = {
+    [1] = "activateColor",
+    [2] = "Heat Wave"
+}
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))     
+end)
+
+change:Button("Absolute Zero", function()
+  local args = {
+    [1] = "activateColor",
+    [2] = "Absolute Zero"
+}
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))     
+end)
+
+change:Button("Snow White", function()
+  local args = {
+    [1] = "activateColor",
+    [2] = "Snow White"
+}
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))     
+end)
+
+change:Button("Pure Red", function()
+  local args = {
+    [1] = "activateColor",
+    [2] = "Pure Red"
+}
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))     
+end)
+
+change:Button("White Sky", function()
+  local args = {
+    [1] = "activateColor",
+    [2] = "Winter Sky"
+}
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))     
+end)
+
 local tp = Library:Window("World TP")
 
 tp:Button("Old World", function()
