@@ -144,7 +144,7 @@ change:Button("White Sky", function()
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))     
 end)
 
-local tp = Library:Window("World TP")
+local tp = Library:Window("Other Stuff")
 
 tp:Button("Old World", function()
 game:GetService('TeleportService'):Teleport(2753915549)
@@ -155,4 +155,8 @@ local args = {
     [1] = "TravelDressrosa"
 }
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+tp:Button("Infinite Ken Range", function()
+game:GetService("Players").LocalPlayer.VisionRadius.Value = "5000000000"
 end)
