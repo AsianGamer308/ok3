@@ -113,3 +113,9 @@ re:Toggle("AutoRebirth", function(value)
     wait(.3)
 end
 end)
+
+re:Button("Print Credits", function()
+   print("Script By Asian")
+   print("UI By Devyonte")
+   print("bloodball")
+end)
