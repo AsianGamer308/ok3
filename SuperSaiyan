@@ -101,6 +101,135 @@ wait()
 end
 end)
 
+w:Toggle("AutoCooler", function(value)
+    getgenv().cool = value
+    while getgenv().cool do
+    for _,v in pairs(game:GetService("Workspace").Dummies:GetDescendants()) do
+    if string.find(v.Name, "Cool") and v:FindFirstChild("HumanoidRootPart") then
+            local args = {
+                [1] = 6
+                    }
+        game:GetService("ReplicatedStorage").Remotes.Combat:FireServer(unpack(args))
+            v:FindFirstChild("HumanoidRootPart").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,5,-10)
+            v:FindFirstChild("HumanoidRootPart").Size = Vector3.new(30,30,30)
+            v:FindFirstChild("HumanoidRootPart").Transparency = .2
+            v:FindFirstChild("HumanoidRootPart").CanCollide = false
+end
+end
+wait()
+end
+end)
+
+w:Toggle("Baby Vegeta", function(value)
+    getgenv().Veg = value
+    while getgenv().Veg do
+    for _,v in pairs(game:GetService("Workspace").Dummies:GetDescendants()) do
+    if string.find(v.Name, "Baby") and v:FindFirstChild("HumanoidRootPart") then
+        repeat
+            wait()
+            local args = {
+                [1] = 6
+                    }
+        game:GetService("ReplicatedStorage").Remotes.Combat:FireServer(unpack(args))
+            v:FindFirstChild("HumanoidRootPart").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,5,-10)
+            v:FindFirstChild("HumanoidRootPart").Size = Vector3.new(30,30,30)
+            v:FindFirstChild("HumanoidRootPart").Transparency = .2
+            v:FindFirstChild("HumanoidRootPart").CanCollide = false
+        until v.Humanoid.Health == 0
+end
+end
+wait()
+end
+end)
+
+w:Toggle("Black Goku", function(value)
+    getgenv().bla = value
+    while getgenv().bla do
+    for _,v in pairs(game:GetService("Workspace").Dummies:GetDescendants()) do
+    if string.find(v.Name, "Black") and v:FindFirstChild("HumanoidRootPart") then
+        repeat
+            wait()
+            local args = {
+                [1] = 6
+                    }
+        game:GetService("ReplicatedStorage").Remotes.Combat:FireServer(unpack(args))
+            v:FindFirstChild("HumanoidRootPart").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,5,-10)
+            v:FindFirstChild("HumanoidRootPart").Size = Vector3.new(30,30,30)
+            v:FindFirstChild("HumanoidRootPart").Transparency = .2
+            v:FindFirstChild("HumanoidRootPart").CanCollide = false
+        until v.Humanoid.Health == 0
+end
+end
+wait()
+end
+end)
+
+w:Toggle("Fieza", function(value)
+    getgenv().Fri = value
+    while getgenv().Fri do
+    for _,v in pairs(game:GetService("Workspace").Dummies:GetDescendants()) do
+    if string.find(v.Name, "Frieza") and v:FindFirstChild("HumanoidRootPart") then
+        repeat
+            wait()
+            local args = {
+                [1] = 6
+                    }
+        game:GetService("ReplicatedStorage").Remotes.Combat:FireServer(unpack(args))
+            v:FindFirstChild("HumanoidRootPart").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,5,-10)
+            v:FindFirstChild("HumanoidRootPart").Size = Vector3.new(30,30,30)
+            v:FindFirstChild("HumanoidRootPart").Transparency = .2
+            v:FindFirstChild("HumanoidRootPart").CanCollide = false
+        until v.Humanoid.Health == 0
+end
+end
+wait()
+end
+end)
+
+w:Toggle("Jiren", function(value)
+    getgenv().ji = value
+    while getgenv().ji do
+    for _,v in pairs(game:GetService("Workspace").Dummies:GetDescendants()) do
+    if string.find(v.Name, "Jiren") and v:FindFirstChild("HumanoidRootPart") then
+        repeat
+            wait()
+            local args = {
+                [1] = 6
+                    }
+        game:GetService("ReplicatedStorage").Remotes.Combat:FireServer(unpack(args))
+            v:FindFirstChild("HumanoidRootPart").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,5,-10)
+            v:FindFirstChild("HumanoidRootPart").Size = Vector3.new(30,30,30)
+            v:FindFirstChild("HumanoidRootPart").Transparency = .2
+            v:FindFirstChild("HumanoidRootPart").CanCollide = false
+        until v.Humanoid.Health == 0
+end
+end
+wait()
+end
+end)
+
+w:Toggle("MajiBuu", function(value)
+    getgenv().bu = value
+    while getgenv().bu do
+    for _,v in pairs(game:GetService("Workspace").Dummies:GetDescendants()) do
+    if string.find(v.Name, "Maji") and v:FindFirstChild("HumanoidRootPart") then
+        repeat
+            wait()
+            local args = {
+                [1] = 6
+                    }
+        game:GetService("ReplicatedStorage").Remotes.Combat:FireServer(unpack(args))
+            v:FindFirstChild("HumanoidRootPart").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,5,-10)
+            v:FindFirstChild("HumanoidRootPart").Size = Vector3.new(30,30,30)
+            v:FindFirstChild("HumanoidRootPart").Transparency = .2
+            v:FindFirstChild("HumanoidRootPart").CanCollide = false
+        until v.Humanoid.Health == 0
+end
+end
+wait()
+end
+end)
+
 local re = Library:Window("Rebirth")
 
 re:Toggle("AutoRebirth", function(value)
@@ -113,6 +242,7 @@ re:Toggle("AutoRebirth", function(value)
     wait(.3)
 end
 end)
+
 
 re:Button("Print Credits", function()
    print("Script By Asian")
