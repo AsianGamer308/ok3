@@ -230,7 +230,22 @@ wait()
 end
 end)
 
-local re = Library:Window("Rebirth")
+local re = Library:Window("Other Stuff")
+
+    local gay = game:GetService("Players")
+re:Toggle("Bring Players", function(value)
+    getgenv().monke = value
+    while getgenv().monke do
+for i,v in pairs(gay:GetPlayers()) do 
+    if v ~= gay.LocalPlayer then 
+    v.Character.HumanoidRootPart.CFrame = gay.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-8)
+    v.Character.HumanoidRootPart.Size = Vector3.new(30,30,30)
+    v.Character.HumanoidRootPart.CanCollide = false
+    end
+end
+wait()
+end
+end)
 
 re:Toggle("AutoRebirth", function(value)
     getgenv().rebirth = value
@@ -243,6 +258,19 @@ re:Toggle("AutoRebirth", function(value)
 end
 end)
 
+re:Button("HitBox Players", function()
+for i,v in pairs(gay:GetPlayers()) do 
+    if v ~= gay.LocalPlayer then 
+    v.Character.HumanoidRootPart.Size = Vector3.new(30,30,30)
+    v.Character.HumanoidRootPart.Transparency = .7
+    v.Character.HumanoidRootPart.CanCollide = false
+    end
+end
+end)
+
+re:Button("Rejoin", function()
+game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+end)
 
 re:Button("Print Credits", function()
    print("Script By Asian")
