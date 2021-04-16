@@ -122,5 +122,5 @@ Section3:NewButton("Bring Key","Use it when you load in map", function()
 end)
 
 Section3:NewButton("TP 2 Chest","Use it when you got the key", function()
-    game:GetService("Workspace").MetaverseEvent.Keys.FeyKey.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-26, 3, -528))
 end)
