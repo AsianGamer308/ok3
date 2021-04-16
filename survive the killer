@@ -64,7 +64,11 @@ sur:NewButton("Fuel TP", "ok", function()
     game.Workspace.RocketFuel["Happy Neighborhood Fuel"].RocketFuel.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 end)
 
-getgenv().Noclip = false -- noclip in the ui :cum:
+game:GetService("RunService").Stepped:Connect(function()
+    if getgenv().getgenv().Noclip then
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+    end
+end)
 sur:NewToggle("NoClip","ok", function(state)
     getgenv().Noclip = state
 end)
