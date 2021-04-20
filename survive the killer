@@ -76,28 +76,6 @@ end)
 local Tab2 = Window:NewTab("Rocket Map")
 local Section2 = Tab2:NewSection("Rocket Map")
 
-Section2:NewButton("Auto Key","Sometimes it doesnt work I didnt use getdescended", function(key)
-getgenv().AutoKey = key
-while getgenv().AutoKey do
-    game.Workspace.CurrentMap.Puzzles.Keys.Key1.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-wait()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.CurrentMap.Puzzles.Locks.Lock1.Root.CFrame
-wait(.5)
-    game.Workspace.CurrentMap.Puzzles.Keys.Key2.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-wait()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.CurrentMap.Puzzles.Locks.Lock2.Root.CFrame
-wait(.5)
-    game.Workspace.CurrentMap.Puzzles.Keys.Key3.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-wait()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.CurrentMap.Puzzles.Locks.Lock3.Root.CFrame
-wait(.5)
-    game.Workspace.CurrentMap.Puzzles.Keys.Key4.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-wait()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.CurrentMap.Puzzles.Locks.Lock4.Root.CFrame
-wait(.5)
-end
-end)
-
 Section2:NewButton("TP To Cell Power","Yes", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").CurrentMap.Puzzles.Safes.Safe2.Collider.CFrame
 end)
