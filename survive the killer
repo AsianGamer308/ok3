@@ -87,14 +87,3 @@ end)
 Section2:NewButton("TP 2 Exit"," Use it when exit is open", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").CurrentMap.ExitDoor.Open.Door.CFrame
 end)
-
-local Tab3 = Window:NewTab("MetaVerse")
-local Section3 = Tab3:NewSection("Meta")
-
-Section3:NewButton("Bring Key","Brings the event key", function()
-    game:GetService("Workspace").MetaverseEvent.Keys.FeyKey.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-end)
-
-Section3:NewButton("TP 2 Chest","Use it when you got the key", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-26, 3, -528))
-end)
