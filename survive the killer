@@ -1,6 +1,4 @@
-for i,v in pairs(Workspace.FuelDeposit.Generator:GetChildren()) do
-    v.CanCollide = false
-end
+
 --locals
 local lp = game.Players.LocalPlayer
 local ps = game:GetService("Players")
