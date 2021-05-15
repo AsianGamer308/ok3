@@ -213,6 +213,13 @@ Section3:NewSlider("Jump", "Pick Jump", 500, 50, function(j)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = j
 end)
 
+Section3:NewToggle("Auto Rebirth", "spams rebirth remote", function(reb)
+getgenv().re = reb
+while getgenv().re do
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.StatsService.RebirthUp:FireServer()
+wait(.5)
+end
+end)
 
 Section3:NewButton("Bigger HitBox", "Make HitBox Bigger", function()
 for i,v in pairs(game:GetService("Players"):GetPlayers()) do 
