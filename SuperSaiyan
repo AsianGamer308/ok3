@@ -237,10 +237,6 @@ for i,v in pairs(game:GetService("Players"):GetPlayers()) do
    table.sort(pt)
 end
 
-local dropdown = Section3:NewDropdown("TP To ","Pick Player to Tp to", pt, function(player)
-  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[player].Character.HumanoidRootPart.CFrame
-end)
-
 local dropdown = Section3:NewDropdown("Bring Player ","Pick Player to bring", pt, function(player)
 game.Players[player].Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 game.Players[player].Character.HumanoidRootPart.Anchored = true
