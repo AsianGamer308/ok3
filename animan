@@ -101,3 +101,11 @@ else
 	end
 end
 end
+while true do
+    wait()
+		for _,v in pairs(game:GetService("Workspace").Living:GetChildren()) do			    
+		    if v:FindFirstChild("AI") then
+			  v.Humanoid.Health = 0
+	    end
+	end
+end
