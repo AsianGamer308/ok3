@@ -1,0 +1,103 @@
+-- this is not made by me I just modify it for my personal use here the thread link of the owner https://v3rmillion.net/showthread.php?tid=1105754
+repeat wait() until game:IsLoaded() and game.Players and game.Players.LocalPlayer and game.Players.LocalPlayer.Character
+if game.PlaceId == 6284881984 then -- if main lobby
+    warn('Map:', _G.Level)
+    game:GetService("ReplicatedStorage").Remotes.CreateRoom:InvokeServer(_G.Level, _G.Password)
+    game:GetService("ReplicatedStorage").Remotes.BeginRoom:FireServer()
+else
+    local me = game.Players.LocalPlayer -- variable for easier usage later
+	
+    local mt = getrawmetatable(game)
+    local old = mt.__namecall
+    setreadonly(mt, false)
+    mt.__namecall = newcclosure(function(name, ...)
+        if tostring(getnamecallmethod()):lower() == "kick" then
+            return
+        elseif getnamecallmethod() == "FireServer" and tostring(name) == "Ban" then
+            return
+        end
+    return old(name, ...)
+    end)
+
+    game:GetService("RunService").RenderStepped:Connect(function()
+    me.Character.Humanoid:ChangeState(11)
+    end)
+    game.Players.LocalPlayer.DevCameraOcclusionMode = "Invisicam"
+
+    
+
+	if _G.AttackType == "Spin" then
+		while wait(.1) do
+		    pcall(function()
+				for _,v in pairs(game:GetService("Workspace").Living:GetChildren()) do
+				    if v:FindFirstChild("AI") then
+    					  v.Humanoid.Health = 0
+    						me.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame + Vector3.new(-(_G.Distance), -(_G.Distance), 0)
+    						me.Character.HumanoidRootPart.CFrame = CFrame.new(me.Character.HumanoidRootPart.Position, v.HumanoidRootPart.Position)
+    						me.Backpack.Input.Remote:FireServer({'Light'})
+						if not _G.NoSkill1 then
+    							game:GetService("Players").LocalPlayer.Backpack.Input.Remote:FireServer({'Skill', '1'})
+						end
+						if not _G.NoSkill2 then
+    							game:GetService("Players").LocalPlayer.Backpack.Input.Remote:FireServer({'Skill', '2'})
+						end
+						if not _G.NoSkill3 then
+    							game:GetService("Players").LocalPlayer.Backpack.Input.Remote:FireServer({'Skill', '3'})
+						end
+						if not _G.NoSkill4 then
+    							game:GetService("Players").LocalPlayer.Backpack.Input.Remote:FireServer({'Skill', '4'})
+						end
+    						game:GetService("Players").LocalPlayer.Backpack.Input.Remote:FireServer({ "Skill", "TeamAssist" })
+    						wait(.15)
+    						me.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame + Vector3.new(-(_G.Distance), -(_G.Distance), -(_G.Distance))
+    						me.Character.HumanoidRootPart.CFrame = CFrame.new(me.Character.HumanoidRootPart.Position, v.HumanoidRootPart.Position)
+    						me.Backpack.Input.Remote:FireServer({'Light'})
+    						wait(.15)
+    						me.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame + Vector3.new(0, -(_G.Distance), -(_G.Distance))
+    						me.Character.HumanoidRootPart.CFrame = CFrame.new(me.Character.HumanoidRootPart.Position, v.HumanoidRootPart.Position)
+    						me.Backpack.Input.Remote:FireServer({'Light'})
+    						wait(.15)
+    						me.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame + Vector3.new((_G.Distance), -(_G.Distance), -(_G.Distance))
+    						me.Character.HumanoidRootPart.CFrame = CFrame.new(me.Character.HumanoidRootPart.Position, v.HumanoidRootPart.Position)
+    						me.Backpack.Input.Remote:FireServer({'Light'})
+    						wait(.1)
+    						me.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame + Vector3.new((_G.Distance), -(_G.Distance), 0)
+    						me.Character.HumanoidRootPart.CFrame = CFrame.new(me.Character.HumanoidRootPart.Position, v.HumanoidRootPart.Position)
+    						me.Backpack.Input.Remote:FireServer({'Light'})
+    						wait(.15)
+    						me.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame + Vector3.new(0, -(_G.Distance), (_G.Distance))
+    						me.Character.HumanoidRootPart.CFrame = CFrame.new(me.Character.HumanoidRootPart.Position, v.HumanoidRootPart.Position)
+    						me.Backpack.Input.Remote:FireServer({'Light'})
+    						wait(.15)
+					end
+				end
+		    end)
+			end
+    else
+	    while wait(.1) do
+			pcall(function()
+				for _,v in pairs(game:GetService("Workspace").Living:GetChildren()) do
+				    if v:FindFirstChild("AI") then
+    					    v.Humanoid.Health = 0 
+    						me.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame + Vector3.new(0, -(_G.Distance), 0)
+    						me.Character.HumanoidRootPart.CFrame = CFrame.new(me.Character.HumanoidRootPart.Position, v.HumanoidRootPart.Position)
+    						me.Backpack.Input.Remote:FireServer({'Light'})
+						if not _G.NoSkill1 then
+    							game:GetService("Players").LocalPlayer.Backpack.Input.Remote:FireServer({'Skill', '1'})
+						end
+						if not _G.NoSkill2 then
+    							game:GetService("Players").LocalPlayer.Backpack.Input.Remote:FireServer({'Skill', '2'})
+						end
+						if not _G.NoSkill3 then
+    							game:GetService("Players").LocalPlayer.Backpack.Input.Remote:FireServer({'Skill', '3'})
+						end
+						if not _G.NoSkill4 then
+    							game:GetService("Players").LocalPlayer.Backpack.Input.Remote:FireServer({'Skill', '4'})
+						end
+    						game:GetService("Players").LocalPlayer.Backpack.Input.Remote:FireServer({ "Skill", "TeamAssist" })
+    				end
+			end
+	    end)
+	end
+end
+end
